@@ -1,0 +1,14 @@
+sistema feito  em :
+
+	Front end : Angular 13.3.0 
+			materia 13.3.5 
+			bootstrap 4.1.3
+			html			
+			css
+			typescript 4.6.2
+
+	Back end : Spring java  2.6.6
+	banco : mysql 7.3.13
+	
+ 	Visual Studio 2022 Developer PowerShell v17.0.5
+	Visual Studio Cod Insiders
