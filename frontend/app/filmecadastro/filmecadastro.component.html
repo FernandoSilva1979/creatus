@@ -1,0 +1,54 @@
+  <mat-card>
+   <mat-card-title> Novo </mat-card-title>
+   <hr>
+   <mat-card-content>
+     <p>
+     <p>
+     <p>
+     <p>
+     <form [formGroup]="form" class="min-width">
+       <mat-form-field class="full-width">
+          <input matInput placeholder="autor" formControlName="autor" [errorStateMatcher]="matcher">
+          <mat-error *ngIf="form.get('autor')?.errors?.['required'] && form.get('autor')?.touched">
+              Autor é <strong>Obrigatório</strong>
+          </mat-error>
+       </mat-form-field>
+       <br>
+       <br>
+       <br>
+
+       <mat-form-field class="full-width">
+         <input matInput placeholder="titulo" formControlName="titulo" [errorStateMatcher]="matcher">
+         <mat-error *ngIf="form.get('titulo')?.errors?.['required'] && form.get('titulo')?.touched">
+             Titulo  é <strong>Obrigatório</strong>
+         </mat-error>
+       </mat-form-field>
+       <br>
+       <br>
+       <br>
+
+       <mat-form-field class="full-width">
+         <input matInput placeholder="titulo" formControlName="descricao" [errorStateMatcher]="matcher">
+         <mat-error *ngIf="form.get('descricao')?.errors?.['required'] && form.get('descricao')?.touched">
+              Descricao  é <strong>Obrigatória</strong>
+         </mat-error>
+       </mat-form-field>
+       <br>
+       <br>
+       <br>
+       <div *ngIf="form.value.id === 0">
+          Arquivo png * :
+          <input type="file" #UploadFileInput id="imagemfilme" formControlName="imagemfilme"  name="imagemfilme" accept="image/png" />
+          <br>
+          <br>
+          <br>
+        </div>
+          <hr>
+       </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+   <button mat-stroked-button color="primary" (click)="onAdicionarfilme()">Salvar</button>
+   <button mat-button mat-dialog-close color="warn" >Sair</button>
+  </mat-card-actions>
+</mat-card>
